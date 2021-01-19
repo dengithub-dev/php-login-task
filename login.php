@@ -1,7 +1,7 @@
 <?php  
 session_start();//session starts here  
 include("db_connection.php");  //call db_connection to connect to the database 
-if(isset($_POST['login']))  //name your global form variable
+if(isset($_POST['login']))  //name of global form variable
 {  
     $username=$_POST['username_input'];  
     $password=$_POST['password_input'];  
