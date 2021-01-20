@@ -5,6 +5,9 @@ if(isset($_POST['login']))  //name of global form variable
 {  
     $username=$_POST['username_input'];  
     $password=$_POST['password_input'];  
+    $username = md5($userword); //decipher md5 hash data 
+    $password = md5($password); //decipher md5 hash data 
+    
     $check_user="select * from table_login_form WHERE username='$username' AND password='$password'";  //Run the query
     $run=mysqli_query($dbcon,$check_user);  //check the database rows for username and password input
     $rowsph = mysqli_num_rows($run);
